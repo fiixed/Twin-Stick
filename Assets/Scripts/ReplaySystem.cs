@@ -30,7 +30,7 @@ public class ReplaySystem : MonoBehaviour {
 		int frame = Time.frameCount % bufferFrames;
 		transform.position = keyFrames[frame].position;
 		transform.rotation = keyFrames[frame].rotation;
-		Debug.Log("PlayBack()");
+		
 	}
 
 	public void Record() {
@@ -38,7 +38,7 @@ public class ReplaySystem : MonoBehaviour {
 		int frame = Time.frameCount % bufferFrames;
 		float time = Time.time;
 		keyFrames[frame] = new MyKeyFrame(time, transform.position, transform.rotation);
-		Debug.Log("Record()");
+		
 	}
 }
 /// <summary>
